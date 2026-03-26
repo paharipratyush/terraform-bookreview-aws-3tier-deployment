@@ -116,7 +116,7 @@ terraform apply --auto-approve
 ```
 (Note: Deployment takes approximately 5-7 minutes, primarily due to the RDS database provisioning).
 ### Step 7: Access the Application
-Upon completion, Terraform will output the Book_Review_Live_URL (your Public ALB DNS).
+Upon completion, Terraform will output the `Book_Review_Live_URL` (your Public ALB DNS).
   - Wait an additional 3-4 minutes for the EC2 user_data bash scripts to finish installing Node.js, running the Next.js build, and starting the Nginx reverse proxy.
   - Navigate to the provided URL in your browser to interact with the live application.
 
