@@ -70,7 +70,7 @@ Before you begin, ensure the following are installed and configured:
 
 ## 🚀 Step-by-Step Deployment Guide
 
-This project follows **secure secrets management** — no passwords are stored in `.tfvars`.
+This project follows **secure secrets management** i.e., no passwords are stored in `.tfvars`.
 
 ### Step 1: Clone the Repository
 
