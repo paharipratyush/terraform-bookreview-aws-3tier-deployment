@@ -1,4 +1,4 @@
-# 🚀 AWS 3-Tier Architecture with Modular Terraform
+# 🚀 AWS 3-Tier Architecture Deployment with Terraform
 
 A fully automated, production-grade 3-tier web application deployment on AWS using Modular Infrastructure-as-Code (IaC).  
 
@@ -77,29 +77,37 @@ This project follows **secure secrets management** — no passwords are stored i
 git clone https://github.com/paharipratyush/terraform-bookreview-aws-3tier-deployment.git
 cd terraform-bookreview-aws-3tier-deployment
 ```
-### Step 2: Initialize Terraform
+### Step 2: Configure Safe Variables
+Create a file named terraform.tfvars in the root directory. Add your non-sensitive configuration values here:
+```Terraform
+aws_region   = "ap-south-1"
+project_name = "bookreview"
+vpc_cidr     = "10.0.0.0/16"
+key_name     = "dmi-key"
+```
+### Step 3: Initialize Terraform
 Downloads the required AWS provider plugins and initializes the modules.
 ```bash
 terraform init
 ```
-### Step 3: Inject Secrets Securely
+### Step 4: Inject Secrets Securely
 Export your desired RDS master password into your terminal session. Terraform automatically ingests environment variables prefixed with TF_VAR_.
 ```bash
 export TF_VAR_db_password="YourSuperSecurePassword123!"
 ```
-### Step 4: Review the Execution Plan
+### Step 5: Review the Execution Plan
 Verify the resources Terraform is about to create.
 ```bash
 terraform plan
 ```
-### Step 5: Deploy the Infrastructure
+### Step 6: Deploy the Infrastructure
 Verify the resources Terraform is about to create.
 ```bash
 terraform apply --auto-approve
 ```
 (Note: Deployment takes approximately 5-7 minutes, primarily due to the RDS database provisioning).
-### Step 5: Deploy the Infrastructure
-Verify the resources Terraform is about to create.Upon completion, Terraform will output the Book_Review_Live_URL (your Public ALB DNS).
+### Step 7: Access the Application
+Upon completion, Terraform will output the Book_Review_Live_URL (your Public ALB DNS).
   - Wait an additional 3-4 minutes for the EC2 user_data bash scripts to finish installing Node.js, running the Next.js build, and starting the Nginx reverse proxy.
   - Navigate to the provided URL in your browser to interact with the live application.
 
