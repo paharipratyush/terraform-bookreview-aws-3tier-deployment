@@ -87,7 +87,7 @@ git clone https://github.com/paharipratyush/terraform-bookreview-aws-3tier-deplo
 cd terraform-bookreview-aws-3tier-deployment
 ```
 ### Step 2: Configure Safe Variables
-Create a file named terraform.tfvars in the root directory. Add your non-sensitive configuration values here:
+Create a file named `terraform.tfvars` in the root directory. Add your non-sensitive configuration values here:
 ```Terraform
 aws_region   = "ap-south-1"
 project_name = "bookreview"
