@@ -72,7 +72,7 @@ Before you begin, ensure the following are installed and configured:
        ```
      - **Option B (AWS Management Console)**: Manually create an RSA key pair named `dmi-key` via the AWS UI.
   
-  (Note: If you choose a different name or region, ensure you update the `key_name` and `aws_region` variables in your terraform.tfvars file.)
+  (Note: If you choose a different name or region, ensure you update the `key_name` and `aws_region` variables in your `terraform.tfvars` file.)
 
 ---
 
