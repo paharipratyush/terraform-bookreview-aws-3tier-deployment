@@ -63,7 +63,7 @@ Before you begin, ensure the following are installed and configured:
 - **AWS CLI** (configured with an IAM user having Administrator access)  
 - **AWS Key Pair**
   - Terraform will attach an SSH key to your EC2 instances so you can securely log in.
-  - You must manually create an RSA Key Pair in your AWS Console named `dmi-key` before deploying,
+  - You must manually create an RSA Key Pair in your AWS Console in your target region (e.g., `ap-south-1`) named `dmi-key` before deploying,
   - OR you can update the `key_name` variable in your `terraform.tfvars` file to match a key you already own.  
 
 ---
