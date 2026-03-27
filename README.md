@@ -3,7 +3,7 @@
 ![AWS](https://img.shields.io/badge/Cloud-AWS-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-A fully automated, production-grade 3-tier web application deployment on AWS using Modular Infrastructure-as-Code (IaC).  
+A fully automated, production-style 3-tier web application deployment on AWS using Modular Infrastructure-as-Code (IaC).  
 
 This project provisions a secure, highly available environment for a **Next.js Frontend**, a **Node.js Backend**, and an **Amazon RDS MySQL Database**. It demonstrates Zero-Touch deployment, strict network isolation, Zero-Trust security group chaining, and automated instance bootstrapping.
 
@@ -131,6 +131,12 @@ To avoid AWS charges, destroy all resources:
 terraform destroy --auto-approve
 ```
 ✅ Ensure all resources are successfully deleted.
+
+## ⚠️ Challenges & Fixes
+
+- Encountered DB connection failures due to timing → solved using wait loop
+- Faced permission issues → fixed using sudo -u ubuntu
+- Backend not accessible → solved via internal ALB routing
 
 ## ⭐ Final Thoughts
 
