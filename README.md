@@ -1,4 +1,7 @@
 # 🚀 AWS 3-Tier Architecture Deployment with Terraform
+![Terraform](https://img.shields.io/badge/IaC-Terraform-blue)
+![AWS](https://img.shields.io/badge/Cloud-AWS-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 A fully automated, production-grade 3-tier web application deployment on AWS using Modular Infrastructure-as-Code (IaC).  
 
