@@ -13,7 +13,11 @@ This project provisions a secure, highly available environment for a **Next.js F
 
 The infrastructure is engineered for security and scalability, completely isolating the backend and database from the public internet.
 
+  <img width="801" height="941" alt="Untitled Diagram-Page-3 drawio" src="https://github.com/user-attachments/assets/4805980d-89b1-4544-8f93-634657ee6f71" />
+
+
 - **Network Tier (VPC):**  
+
   A custom VPC (`10.0.0.0/16`) spanning 2 Availability Zones for high availability.  
   Contains 6 subnets:
   - 2 Public Web Subnets  
